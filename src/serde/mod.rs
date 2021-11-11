@@ -5,6 +5,8 @@
 // Types with guaranteed stable serde representations. Strings are avoided to allow for optimal
 // representations in various binary forms.
 
+#[cfg(all(feature = "formatting", feature = "parsing"))]
+pub mod rfc3339;
 pub mod timestamp;
 
 use serde::de::Error as _;
